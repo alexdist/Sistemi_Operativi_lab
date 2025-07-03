@@ -1,0 +1,8 @@
+/*Scrivere un programma C che crea M thread produttori e N thread consumatori
+(con M = 2*N), con M ed N presi come parametro da riga di comando. Tutti i thread
+condividono una variabile intera. Ogni thread produttore incrementa di due unità
+la variabile condivisa se e solo se il valore della stessa è inferiore a 100.
+Ogni thread consumatore decrementa di due unità la variabile condivisa se e solo se il
+valore della stessa è superiore a 25. Tutti i thread, dopo l'operazione sulla variabile
+condivisa (di incremento o di decremento) dormono per 2 secondi. Per implementare la 
+sincronizzazione utilizzare i semafori Posix basati su nome*/
