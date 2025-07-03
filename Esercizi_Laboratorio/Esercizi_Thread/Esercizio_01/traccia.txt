@@ -1,0 +1,6 @@
+Scrivere un programma C, secondo lo standard Posix, in ambiente Linux, che date due matrici
+A e B di dimensioni nxm di interi tra 0 e 255, ne determini una matrice C in cui ogni entrata
+C(i,j) è ottenuta dalla divisione A(i,j)/B(i,j). Il calcolo avviene concorrentemente usando
+m threads, uno per colonna. Appena un thread termina il calcolo della propria colonna di C, attende
+che tutti gli altri thread abbiano finito. A quel punto, un thread n+1-esimo stamperà la matrice C.
+Usare i semafori Posix.
