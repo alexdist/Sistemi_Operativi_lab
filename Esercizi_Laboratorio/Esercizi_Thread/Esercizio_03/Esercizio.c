@@ -37,6 +37,7 @@ void* sommaentrate(void* arg)
     while(indice != indicecorrente){
         pthread_cond_wait(&cond, &mutex);
     }
+    pthread_mutex_unlock(&mutex);
     
     //calcola la riga della somma
     for(int j=0;j<n;j++){
@@ -44,6 +45,7 @@ void* sommaentrate(void* arg)
         Somma[indice][j] = A[indice][j] + B[indice][j];
     }
 
+    pthread_mutex_lock(&mutex);
     indicecorrente++;
     threadfinito++;
 
