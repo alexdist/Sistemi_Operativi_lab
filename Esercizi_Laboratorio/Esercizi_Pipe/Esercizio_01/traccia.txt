@@ -1,0 +1,3 @@
+PIPE 2 COMANDI
+/*Scrivere un programma in ambiente Linux che implementi, stile shell BASH, la seguente pipeline
+inserita da riga di comando: ls -LF | wc -c*/
