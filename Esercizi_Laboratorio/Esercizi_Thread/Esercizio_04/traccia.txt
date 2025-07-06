@@ -1,0 +1,11 @@
+Scrivere un programma in C e Posix sotto Linux che utilizzi la 
+libreria Pthread per risolvere il seguente problema: date 
+due matrici A e B, di dimensioni nxn di numeri interi tra 
+1 e 100 generati casualmente, creare n thread dove l'i-esimo 
+thread provvede a sommare le entrate delle righe i-esime 
+delle due matrici in modo da ottenere una matrice Somma 
+di dimensioni nxn. Sincronizzare i thread in modo da sommare 
+le righe delle due matrici A e B nell'ordine 1, 2, ..., n. 
+Inoltre, un thread n+1-esimo attende che la matrice Somma sia 
+calcolata, per stamparne, successivamente, il contenuto. 
+Usare semafori e variabili di condizione.
