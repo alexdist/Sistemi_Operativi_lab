@@ -1,0 +1,3 @@
+Scrivere un programma che, presa una directory da riga di comando, provveda a scorrerla
+allo scopo di stampare i nomi di tutti i file puntati da link simbolici e la loro dimensione,
+se questi hanno i diritti di scrittura e lettura per il proprietario e per gli altri.
