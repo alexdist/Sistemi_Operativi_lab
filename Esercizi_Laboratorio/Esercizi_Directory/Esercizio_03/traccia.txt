@@ -1,0 +1,2 @@
+Si realizzi un programma in C, secondo lo standard Posix, in ambiente Linux, che presa una directory da riga di comando come parametro, 
+ne stampi i dettagli (nome, data di ultimo accesso, permessi) dei file puntati dai link simbolici presenti nella directory
