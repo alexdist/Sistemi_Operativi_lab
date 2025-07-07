@@ -1,0 +1,3 @@
+Scrivere un programma in C che (in ambiente Linux e utilizzando la libreria Pthread) crei 2 thread che eseguono la funzione "incrementa" che a sua volta accede alle variabili
+glob.a e glob.b di una struttura dati condivisa glob e ne incrementi il loro valore di di 1 per 100 volte. Al termine, quando i thread avranno terminato con gli incrementi, il
+thread principale stamperà a video i valori delle variabili test.a e test.b. Per la gestione della sincronizzazione si utilizzino i mutex allocati dinamicamente.
