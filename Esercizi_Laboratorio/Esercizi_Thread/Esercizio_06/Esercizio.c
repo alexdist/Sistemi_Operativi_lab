@@ -23,40 +23,39 @@ pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 
 void* prelievoelemento(void* arg)
 {
-    int indice = *(int*)arg;
-    free(arg);
+    int indice = *(int*)arg;           // Recupera l'indice del thread (passato come puntatore a int)
+    free(arg);                         // Libera la memoria allocata per l'argomento
 
-    while(1){
+    while(1){                          // Ciclo infinito: il thread continuerà a lavorare finché il vettore non è pieno
     
-    pthread_mutex_lock(&mutex);
+        pthread_mutex_lock(&mutex);   // Entra nella sezione critica: blocca il mutex per accesso esclusivo alle risorse condivise
 
-    if(indicevettore >= (n+1)/2){
-            pthread_mutex_unlock(&mutex);
-            break; //vettore pieno, uscita dal ciclo
+        if(indicevettore >= (n+1)/2){ // Se il vettore è già pieno
+            pthread_mutex_unlock(&mutex); // Rilascia il mutex
+            break;                   // Esce dal ciclo e termina il thread
         }
 
-    int col = rand()%n;
-    int elemento = 0;
+        int col = rand()%n;          // Sceglie casualmente una colonna nella riga del thread
+        int elemento = 0;
 
-    elemento = A[indice][col];
-    v[indicevettore] = elemento;
-    contatore[indice]++;
-    indicevettore++;
-    
-    
-    if(indicevettore == (n+1)/2){
-        pthread_cond_signal(&cond);
+        elemento = A[indice][col];   // Preleva l'elemento dalla matrice nella riga del thread e colonna casuale
+        v[indicevettore] = elemento; // Inserisce l'elemento nel vettore condiviso
+        contatore[indice]++;         // Incrementa il contatore per il thread corrente (quanti elementi ha inserito)
+        indicevettore++;             // Avanza l'indice globale del vettore condiviso
+
+        if(indicevettore == (n+1)/2){ // Se il vettore è pieno dopo l'inserimento
+            pthread_cond_signal(&cond); // Manda un segnale al thread stampatore (che è in attesa)
+        }
+
+        pthread_mutex_unlock(&mutex);   // Rilascia il mutex: altri thread possono entrare nella sezione critica
+
+        usleep(10000);              // Attende 10 millisecondi per evitare starvation e favorire l'interleaving dei thread
     }
-   
-    pthread_mutex_unlock(&mutex);
-    
-    usleep(10000); //sleep per evitare starvation
-    }
-    
-    return NULL;
 
-
+    return NULL;                    
 }
+
+
 
 void* stampavettore(void* arg)
 {
