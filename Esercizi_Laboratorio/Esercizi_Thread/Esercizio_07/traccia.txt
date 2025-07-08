@@ -1,0 +1,3 @@
+Si realizzi un programma in C e Posix sotto Linux che, con l'ausilio della libreria Pthread, lancia m thread per calcolare il prodotto di due matrici di dimensione mxn e nxp.
+Non appena sarà calcolata la matrice prodotto, un m+1-esimo thread, che era in attesa, provvederà a stampare la matrice risultato. Le matrici devono essere allocate dinamicamente. 
+Usare i semafori Posix basati su nome.
