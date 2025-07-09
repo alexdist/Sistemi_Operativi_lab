@@ -1,0 +1,3 @@
+Si realizzi un programma in C e Posix sotto Linux che, con l'ausilio della libreria Pthread, lancia k thread per calcolare il prodotto di due matrici di dimensione kxm e mxp.
+Non appena sarà calcolata la matrice prodotto, un k+1-esimo thread aggiuntivo, che era rimasto in attesa, provvederà a stampare la matrice risultato. Le matrici devono essere allocate dinamicamente.
+Usare le variabili di condizione.
