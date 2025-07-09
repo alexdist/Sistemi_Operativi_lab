@@ -1,0 +1,2 @@
+Si scriva un programma in C sotto Linux che implementi la seguente pipeline di comandi:
+ls -la/ | sort | tail -10 | wc -l
