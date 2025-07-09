@@ -1,0 +1,2 @@
+Scrivere un programma in C (POSIX, LINUX) che, dati in input un numero intero e il percorso di una directory, 
+stampi il nome e la dimensione di tutti i file presenti nella directory la cui dimensione supera il valore numerico specificato.
