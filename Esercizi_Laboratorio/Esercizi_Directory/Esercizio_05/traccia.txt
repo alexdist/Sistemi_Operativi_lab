@@ -1,0 +1,3 @@
+Scrivere un programma in C e Posix sotto Linux che, presa in input una directory, dopo averne
+analizzato il suo contenuto, identifichi il file di lunghezza minima e ne stampi la maschera
+dei permessi relativi agli altri.
