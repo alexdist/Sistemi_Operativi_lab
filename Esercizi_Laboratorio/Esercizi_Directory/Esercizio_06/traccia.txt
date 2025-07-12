@@ -1,0 +1,11 @@
+Si realizzi un programma in C e Posix sotto Linux che presi due parametri da riga di comando
+(il primo parametro sarà il percorso di una directory e il secondo sarà un numero intero che 
+rappresenta i permessi nel formato ottale relativi ai file) faccia il parsing della directory
+passato come primo argomento e stampi i nomi, i permessi e la data di ultima modifica dei file
+contenuti in tale directory per cui i permessi corrispondono a quanto specificato nel secondo parametro.
+
+Ad esempio, se il programma viene lanciato in questo modo:
+./a.out  /usr/local/bin  4755
+il programma stamperà il nome, i permessi e la data di ultima modifica di ogni file presente nella directory
+/usr/local/bin che avranno i permessi seguenti: bit di set-uid settato, lettura + scrittura + esecuzione per il
+proprietario, lettura + esecuzione sia per il gruppo che per tutti gli altri utenti del sistema.
