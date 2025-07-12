@@ -1,6 +1,0 @@
-Si realizzi un programma in C e Posix sotto Linux che, con l'ausilio della libreria Pthread, lancia
-m thread concorrenti per cercare il massimo di ciascuna delle m righe di una matrice mxn di interi
-e scriverlo in un array di dimensione m nella prima posizione libera disponibile. Un thread m+1-esimo,
-completato il lavoro dei primi m thread, provvede a cercare il massimo dei massimi e a stamparlo. Usare
-semafori Posix basati su nome e variabili di condizione. La dimensione della matrice può essere fornita
-in input al programma in fase di esecuzione o da riga di comando.
