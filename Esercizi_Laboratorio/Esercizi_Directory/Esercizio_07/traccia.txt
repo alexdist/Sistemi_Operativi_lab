@@ -1,0 +1,3 @@
+Scrivere un programma in C e Posix sotto Linux che, presa in input un file completo di percorso, 
+verifichi se questo sia un link e a quale file punta e infine del file puntato
+restituire lo UID del proprietario, la grandezza del file e tutti i permessi associati a tale file.
