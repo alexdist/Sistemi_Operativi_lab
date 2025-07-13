@@ -1,0 +1,2 @@
+Scrivere un programma in C e Posix sotto Linux che, presa in input un file completo di percorso,
+restituisca lo UID del proprietario, la grandezza del file e tutti i permessi associati a tale file.
