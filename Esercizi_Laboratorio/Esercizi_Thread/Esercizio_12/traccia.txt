@@ -1,0 +1,3 @@
+Scrivere un programma C, secondo lo standard Posix, in ambiente Linux, che realizzi il prodotto di
+due matrici di dimensioni nxm e mxp in maniera concorrente, utilizzando n thread. Un thread n+1 esimo
+attenderà il calcolo della matrice prodotto per stampare il contenuto. Utilizzare i semafori Posix.
