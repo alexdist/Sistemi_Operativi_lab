@@ -8,7 +8,7 @@ int main() {
     int pid = 0;
     int i;
 
-    for (i = 0; i < 3; i++) {
+    for (i = 1; i < 3; i++) {
         fork();
 
         if (!pid) {
