@@ -13,7 +13,7 @@ int main() {
     if (!fork()) {
         pid = fork();
         glob = glob * 2;
-        pid = 0;  // corretto da 'Pid'
+        pid = 0;  
     }
 
     if (!pid) {
